@@ -5,6 +5,7 @@
     <p class="text-center">{{post.content}}</p>
 </div>
 <ul class="list-group list-group-flush">
+    {{#if loggedIn}}
         <form action="submit" class="comment-form">
         <div class="mb-3">
             <label for="comment" class="form-label">New Comment</label>
@@ -12,6 +13,7 @@
             <button type="submit" class="btn btn-primary mt-2">Add Comment</button>
           </div>
     </form>
+    {{/if}}
     <p>Comments:</p>
     {{#each post.comments}}
     <li class="list-group-item border-bottom"><strong>{{user.username}}</strong> says: 
@@ -19,4 +21,6 @@
     <p>{{created_at}}</p></li>
     {{/each}}
   </ul>
+  {{#if loggedIn}}
   <script src="/js/comment.js"></script>
+  {{/if}}
