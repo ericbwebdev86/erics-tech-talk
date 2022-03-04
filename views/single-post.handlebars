@@ -1,0 +1,22 @@
+<div class="container mt-5 border border-3 shadow-lg p-3 mb-5 bg-body rounded">
+    <h2 class="text-center">{{post.title}}</h2>
+    <p class="text-center">{{post.created_at}}</p>
+    <p class="text-center">by: <span class="fw-bold">{{post.user.username}}</span></p>
+    <p class="text-center">{{post.content}}</p>
+</div>
+<ul class="list-group list-group-flush">
+        <form action="submit" class="comment-form">
+        <div class="mb-3">
+            <label for="comment" class="form-label">New Comment</label>
+            <textarea class="form-control" id="comment" rows="3" name="comment-body"></textarea>
+            <button type="submit" class="btn btn-primary mt-2">Add Comment</button>
+          </div>
+    </form>
+    <p>Comments:</p>
+    {{#each post.comments}}
+    <li class="list-group-item border-bottom"><strong>{{user.username}}</strong> says: 
+    <p>{{comment_text}}</p>
+    <p>{{created_at}}</p></li>
+    {{/each}}
+  </ul>
+  <script src="/js/comment.js"></script>
