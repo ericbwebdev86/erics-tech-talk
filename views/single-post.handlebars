@@ -15,11 +15,7 @@
     </form>
     {{/if}}
     <p>Comments:</p>
-    {{#each post.comments}}
-    <li class="list-group-item border-bottom"><strong>{{user.username}}</strong> says: 
-    <p>{{comment_text}}</p>
-    <p>{{created_at}}</p></li>
-    {{/each}}
+    {{> comments post.comments}}
   </ul>
   {{#if loggedIn}}
   <script src="/js/comment.js"></script>
