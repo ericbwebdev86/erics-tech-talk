@@ -1,14 +1,28 @@
 <div class="container mt-5">
     <h1>Your Dashboard</h1>
-    <form action="submit" class="post-form">
+    <form class="new-post-form">
         <div class="mb-3">
             <label for="postTitle" class="form-label">New Post Title</label>
-            <input type="text" class="form-control" id="postTitle" placeholder="Your new post title goes here...">
+            <input type="text" class="form-control" id="postTitle" placeholder="Your new post title goes here..." name="post-title">
           </div>
           <div class="mb-3">
             <label for="postContent" class="form-label">New Post Content</label>
-            <textarea class="form-control" id="postContent" rows="3"></textarea>
+            <input class="form-control" id="postContent" rows="3" type="text" name="post-content"></input>
             <button type="submit" class="btn btn-primary mt-2">Create Post</button>
           </div>
     </form>
 </div>
+<div class="container">
+    {{#if posts.length}}
+    <h1 class="text-center mt-2">Your Posts</h1>
+    <ul class="list-group mt-5">
+        {{#each posts as |post|}}
+        <li class="list-group-item">
+            {{> post-info post}}
+            <a href="/dashboard/edit/{{post.id}}">Edit Post</a>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+</div>
+<script src="/js/add-post.js"></script>
