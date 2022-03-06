@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <h1>Edit Post</h1>
+    <a href="/dashboard">&larr; Go Back</a>
+    <form class="edit-post-form">
+        <div class="mb-3">
+            <input type="text" class="form-control" id="postTitle" name="edit-post-title" value="{{post.title}}">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="postContent" rows="3" type="text" name="edit-post-content" value="{{post.content}}"></textarea>
+            <button type="submit" class="btn btn-info mt-2 edit-post-btn">Save</button>
+            <button type="button" class="btn btn-danger mt-2 del-post-btn">Delete</button>
+          </div>
+    </form>
+</div>
+
+<script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>
