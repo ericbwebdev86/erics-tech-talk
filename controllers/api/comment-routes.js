@@ -60,20 +60,20 @@ router.put('/:id', (req, res) => {
 });
 
 //delete a comment
-router.delete('/:id', (req, res) => {
-    Comment.destroy({
-        where: {
-            id: req.params.id
-        }
-    }).then(dbCommentdata => {
-        if(!dbCommentdata) {
-            res.status(404).json({ message: 'No comment found with that ID' });
-            return;
-        }
-        res.json(dbCommentdata);
-    }).catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    });
-});
+// router.delete('/:id', (req, res) => {
+//     Comment.destroy({
+//         where: {
+//             id: req.params.id
+//         }
+//     }).then(dbCommentdata => {
+//         if(!dbCommentdata) {
+//             res.status(404).json({ message: 'No comment found with that ID' });
+//             return;
+//         }
+//         res.json(dbCommentdata);
+//     }).catch(err => {
+//         console.log(err);
+//         res.status(500).json(err);
+//     });
+// });
 module.exports = router;

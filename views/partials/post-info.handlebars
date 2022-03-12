@@ -1,7 +1,10 @@
 <a href="/post/{{id}}" class="text-decoration-none">
-            <h2 class="text-dark">{{title}}</h2>
+            <h2 class="text-light">{{title}}</h2>
             </a>
-        <p>Original Poster: 
-            <strong>{{user.username}}</strong></p>
-        <p>{{format_date created_at}}</p>
+        <p>
+            Written by: 
+            <strong>{{user.username}}</strong>
+            on {{format_date created_at}}
+            </p>
+        
         <span class="badge bg-primary text-wrap">Comments: {{comments.length}}</span>

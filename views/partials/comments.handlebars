@@ -1,5 +1,6 @@
 {{#each this}}
-    <li class="list-group-item border-bottom"><strong>{{user.username}}</strong> says: 
-    <p>{{comment_text}}</p>
-    <p>{{format_date created_at}}</p></li>
+    <li class="list-group-item border border-secondary bg-dark text-light">
+        <p>{{comment_text}}</p>
+    <p class="text-end">From user: <strong>{{user.username}}</strong> on {{format_date created_at}}</p>
+    </li>
     {{/each}}

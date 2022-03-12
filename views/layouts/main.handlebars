@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/style.css">
     <title>Eric's Tech Talk</title>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="bg-secondary">
 <!-- ***
     dashboard
 ***-->
@@ -47,9 +47,10 @@
 <!-- ***
     posts
 ***-->
-<main class="container">
-    {{{ body }}}
+<main>
+    <div class="container border border-2 rounded-3 text-light mt-5 background">{{{ body }}}</div>
 </main>
+
 <!-- ***
     posts
 ***-->
@@ -77,12 +78,11 @@
 *** -->
 
 <!-- JavaScript Bundle with Popper -->
-<footer class="footer bg-dark text-light text-center mt-auto">
-    &copy;2022 Eric Bates
-</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 {{#if loggedIn}}
 <script src="/js/logout.js"></script>
 {{/if}}
+<footer class="bg-dark text-light text-center mt-5">&copy;2022 Eric's Tech Talk LLC.</footer>
 </body>
 </html>

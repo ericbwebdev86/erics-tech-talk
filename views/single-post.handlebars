@@ -1,11 +1,11 @@
-<div class="container mt-5 border border-3 shadow-lg p-3 mb-5 bg-body rounded">
+<div class="container mt-5 border border-3 shadow-lg p-3 mb-5 bg-secondary">
     <h2 class="text-center">{{post.title}}</h2>
     <p class="text-center">by: <span class="fw-bold">{{post.user.username}}</span> on {{format_date post.created_at}}</p>
-    <p class="text-center">{{post.content}}</p>
+    <p class="">{{post.content}}</p>
 </div>
-<ul class="list-group list-group-flush">
+<ul class="list-group list-group-flush mb-5 text-light">
     {{#if loggedIn}}
-        <form action="submit" class="comment-form">
+        <form class="comment-form">
         <div class="mb-3">
             <label for="comment" class="form-label">New Comment</label>
             <textarea class="form-control" id="comment" rows="3" name="comment-body"></textarea>

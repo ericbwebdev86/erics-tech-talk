@@ -7,19 +7,19 @@
           </div>
           <div class="mb-3">
             <label for="postContent" class="form-label">New Post Content</label>
-            <input class="form-control" id="postContent" rows="3" type="text" name="post-content"></input>
+            <textarea class="form-control" id="postContent" rows="3" type="text" name="post-content" placeholder="Your post content goes here..."></textarea>
             <button type="submit" class="btn btn-primary mt-2">Create Post</button>
           </div>
     </form>
 </div>
-<div class="container">
+<div class="container mb-2">
     {{#if posts.length}}
     <h1 class="text-center mt-2">Your Posts</h1>
     <ul class="list-group mt-5">
         {{#each posts as |post|}}
-        <li class="list-group-item">
+        <li class="list-group-item bg-secondary">
             {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}">Edit Post</a>
+            <a href="/dashboard/edit/{{post.id}}" class="text-decoration-none fw-bold text-info">Edit Post</a>
         </li>
         {{/each}}
     </ul>
