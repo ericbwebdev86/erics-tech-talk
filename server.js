@@ -20,11 +20,6 @@ const sess = {
     })
 };
 
-
-
-
-
-
 app.use(session(sess));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
