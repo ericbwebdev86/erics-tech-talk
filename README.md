@@ -3,17 +3,20 @@
 
   ## Table of Contents
   1. [Description](#description)
-  2. [Installation](#installation)
-  3. [Usage](#usage)
-  4. [Credits](#credits)
-  5. [Test](#test)
-  6. [Contact](#contact)
-  7. [License](#license)
+  2. [technology used](#technology-used)
+  3. [Installation](#installation)
+  4. [Usage](#usage)
+  5. [Credits](#credits)
+  6. [Test](#test)
+  7. [Contact](#contact)
+  8. [License](#license)
   
 
   ## Description
-This is a blog site where you can view posts and comments. I built this app using:
-NodeJS
+This is a blog site where you can view posts and comments.
+
+## Technology used
+*NodeJS
 Sequelize
 Express-handlebars
 ExpressJS
