@@ -13,7 +13,7 @@
   
 
   ## Description
-This is a blog site where you can view posts and comments.
+This is a blog site where you can view posts and comments. A user can only post and comment when authenticated to the site. The authenticated user has a dashboard where posts can be created, edited and deleted. Authenticated users will be logged out automatically after 5 minutes, or if the logout button is clicked. 
 
 ## Technology used
 * NodeJS
@@ -26,7 +26,7 @@ This is a blog site where you can view posts and comments.
 * dotenv
 * bcrypt
 
- A user can only post and comment when authenticated to the site. The authenticated user has a dashboard where posts can be created, edited and deleted. Authenticated users will be logged out automatically after 5 minutes, or if the logout button is clicked. 
+ 
 
 ## Installation
   Run "npm i"
